@@ -16,5 +16,13 @@ public class UIManager : MonoBehaviour
     {
         startButton.SetBool("ishidden", true);
         settingsButton.SetBool("ishidden", true);
+        dialog.SetBool("isHidden", false);
+    }
+    public Animator dialog;
+    public void CloseSettings()
+    {
+        startButton.SetBool("isHidden", false);
+        settingsButton.SetBool("isHidden", false);
+        dialog.SetBool("isHidden", true);
     }
 }
